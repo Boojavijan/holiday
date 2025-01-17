@@ -146,3 +146,168 @@
     animation: fadeIn 0.6s ease-in-out;
   }
   
+  /* General Mobile Styles */
+@media screen and (max-width: 480px) {
+  .review-section {
+      flex-direction: column;
+      gap: 15px;
+      margin: 10px;
+      padding: 15px;
+  }
+
+  .dynamic-counter, .review-card {
+      width: 100%;
+      height: auto;
+      /* padding: 10px; */
+      
+  }
+
+  .dynamic-counter {
+      margin-left: 0;
+  }
+
+  .review-profile {
+      width: 60px;
+      height: 60px;
+      font-size: 24px;
+  }
+
+  .review-content p {
+      font-size: 14px;
+      padding: 10px;
+  }
+
+  .carousel-indicators {
+      bottom: -40px;
+      left: 50%;
+      transform: translateX(-50%);
+  }
+
+  .about-text {
+      font-size: 14px;
+      line-height: 1.6;
+      padding: 10px;
+  }
+}
+
+/* Tablet Styles */
+@media screen and (max-width: 1024px) {
+  .review-section {
+      flex-direction: column;
+      gap: 25px;
+      padding: 20px;
+  }
+
+  .dynamic-counter, .review-card {
+      width: 100%;
+      height: auto;
+  }
+
+  .dynamic-counter {
+      margin-left: 0;
+      padding: 15px;
+  }
+
+  .review-profile {
+      width: 80px;
+      height: 80px;
+      font-size: 30px;
+  }
+
+  .review-content p {
+      font-size: 16px;
+      padding: 15px;
+  }
+
+  .carousel-indicators {
+      bottom: -50px;
+      left: 50%;
+      transform: translateX(-50%);
+  }
+}
+
+/* Desktop Styles */
+@media screen and (min-width: 1200px) {
+  .review-section {
+      gap: 40px;
+  }
+
+  .dynamic-counter {
+      width: 30%;
+      height: 350px;
+  }
+
+  .review-card {
+      width: 65%;
+  }
+
+  .review-profile {
+      width: 100px;
+      height: 100px;
+      font-size: 36px;
+  }
+
+  .review-content p {
+      font-size: 18px;
+      padding: 20px;
+  }
+}
+.container-about {
+  display: flex;
+  /* Ensures wrapping for smaller screens */
+  justify-content: space-between;
+  /* gap: 20px; Adjusts the spacing between items */
+  padding: 20px;
+}
+
+
+/* Media Queries for Smaller Screens */
+@media screen and (max-width: 768px) {
+  .container-about {
+      flex-direction: row; 
+      align-items: center; /* Centers the content */
+      gap: 15px; /* Reduces the gap between rows */
+  }
+}
+
+/* Media Queries for Tablets */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .container-about {
+      flex-direction: row; /* Maintains row layout */
+      justify-content: center; /* Centers content */
+      gap: 25px; /* Adjusts spacing */
+  }
+}
+
+/* Media Queries for Large Screens */
+@media screen and (min-width: 1024px) {
+  .container-about {
+      flex-direction: row; /* Maintains row layout */
+      justify-content: space-between; /* Spreads out items evenly */
+      gap: 30px;
+  }
+}
+
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .container-about .row {
+    flex-direction: column; /* Stack columns vertically */
+  }
+  
+  .left-content, .border-start {
+    border: none; 
+    text-align: center; 
+    width :100%;
+  }
+
+  .border-start ul {
+    list-style: none; 
+    padding: 0;
+  }
+
+  .section-heading {
+    font-size: 1.5rem;
+  }
+}
+
