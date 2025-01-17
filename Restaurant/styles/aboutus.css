@@ -1,0 +1,148 @@
+.review-section {
+    display: flex;
+    margin-top: 10px; 
+    margin: 20px;
+    gap: 60px;
+    padding: 30px;
+  }
+  
+  .dynamic-counter {
+    flex: 10px;
+    padding: 15px;
+    margin-left: 100px;
+    
+    background-color: #002a22;
+    border-radius: 10px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color: #f4b776;
+  }
+  .left-content{
+      width: 70%;
+      padding:15px;
+  }
+  .section-heading h2{
+    align-items: center;
+  }
+  
+  .dynamic-counter h5 {
+    margin: 8;
+    font-size: 18px;
+  }
+  
+  .dynamic-counter span {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .review-card {
+    border: 2px solid #f4b776;
+    background-color: #002a22;
+    padding: 15px;
+    border-radius: 10px;
+    color: #f4b776;
+    display: flex;
+    align-items: flex-start;
+    width: 70%;
+    
+    height: 350px;
+    margin-right: 10px;
+  }
+  
+  .review-profile {
+    background-color: #f4b776;
+    color: #004138;
+    font-size: 40px;
+    font-weight: bold;
+    border-radius: 60%;
+    width: 300px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+  }
+  
+  .review-content h5 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .review-content p {
+    margin: 5px 0 10px;
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 1cm;
+   
+  }
+  
+  .stars {
+    color: #f4b776;
+    font-size: 16px;
+  }
+  
+  .carousel-indicators {
+    position: absolute;
+    bottom: -53px;
+    left: 20%;
+    transform: translateX(-50%);
+  }
+  
+  .carousel-indicators [data-bs-target] {
+    background-color: #f38108;
+    width: 10px;
+    height: 10px;
+  }
+  
+  .carousel-indicators .active {
+    background-color: #f4b776;
+  }
+  
+    .border-start {
+      border-left: 2px solid #f4b776;
+      width: 30%;
+      padding: 5px;
+      
+    }
+    .border-start p,ul{
+       margin-right: 25px;
+    }
+    
+  
+    .about-text {
+      line-height: 1.8;
+      text-align: justify;
+      padding: 13px;
+      margin: 15px;
+    }
+    /* Media Queries */
+  @media screen and (max-width: 768px) {
+    .review-section {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .dynamic-counter, .review-card {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .dynamic-counter, .review-card {
+    animation: fadeIn 0.6s ease-in-out;
+  }
+  

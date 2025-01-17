@@ -1,0 +1,177 @@
+
+.contact-page {
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    color: #f4b776;
+}
+
+.header p {
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.contact-info, .contact-form {
+    flex: 1 1 45%;
+    background-color: #01332c;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.contact-info h2, .contact-form h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #f4b776;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+    
+}
+
+.contact-form .form-group {
+    margin-bottom: 15px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #f1b604;
+    border-radius: 4px;
+    background-color: #01332c;
+    color: #f4b776;
+}
+
+.contact-form .btn {
+    background-color: #f4b776;
+    color: #004138;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.contact-form .btn:hover {
+    background-color: #e4a664;
+}
+
+.map-container {
+    text-align: center;
+}
+
+.map-container h2 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #f4b776;
+}
+.contact-header {
+    text-align: center;
+    padding: 2rem 0;
+    color: #f4b776;
+}
+
+.form-control,
+.btn-primary {
+    color: #f4b776;
+    background-color: #004138;
+    border-color: #e4a664 ;
+}
+#name.form-control{
+    color: #f4b776;
+    border-color: #e4a664 ;
+}
+
+.form-control:focus {
+    border-color: #ffcc99;
+    color: #004138;
+    background:#004138;
+    box-shadow: 0 0 0 0.25rem rgba(255, 204, 153, 0.5);
+}
+
+.btn-primary:hover {
+    background-color: #ffcc99;
+}
+
+.map-container {
+    margin-top: 1.5rem;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+/* Input Fields */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-color: #e4a664 ;
+    
+    border-radius: 5px;
+    background-color:#004138;
+    color: #004138;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+
+
+
+
+/* Button */
+button[type="submit"] {
+    background-color: #004138;
+    color: #f4b776;
+    border: 2px solid #f4b776;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Button Hover State */
+button[type="submit"]:hover {
+    background-color: #f4b776;
+    color: #004138;
+    border-color: #f4b776;
+}
+
+/* Button Active State */
+button[type="submit"]:active {
+    background-color: #f4b776;
+    color: #fff;
+    transform: scale(0.95);
+}
+
+
+
+    
+            
+    
+           
+    
+            

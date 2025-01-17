@@ -1,0 +1,186 @@
+.gallery-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+    width: 100%;
+    animation: bounceIn 3s ease;
+}
+
+.thumbnail-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 10px;
+    width: 30%;
+    margin-right: 20px; 
+}
+
+.thumbnail {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 1s ease; 
+}
+
+.thumbnail:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.display-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    padding: 20px;
+    border-radius: 8px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    gap: 20px; 
+    animation: slideIn 1s ease; 
+    animation: bounceIn 1s ease;
+}
+
+#displayed-image {
+    max-width: 100%;
+    max-height: 500px;
+    object-fit: contain;
+    width: 300px; 
+    height: auto; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    animation: zoomIn 1s ease; 
+}
+.display-info {
+    margin: 40px;
+}
+
+.display-container div:last-child {
+    flex: 1; 
+}
+
+#displayed-description {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    animation: fadeIn 1s ease;
+}
+
+#displayed-duration {
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 15px;
+    animation: fadeIn 1.2s ease;
+}
+
+#explore-button {
+    padding: 10px 20px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    background-color: rgb(5, 113, 81);
+    color: #f4b776;
+    border: none;
+    border-color: #f4b776;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    animation: bounceIn 1s ease; /* Add bounce-in animation */
+}
+
+#explore-button:hover {
+    color: #004e44;
+    background: #f4b776;
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.9);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Tablet and small screen adjustments */
+@media (max-width: 1024px) {
+    .thumbnail-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 images per line on tablets */
+    }
+
+    .gallery-container {
+        justify-content: center;
+    }
+
+    .display-container {
+        width: 80%; /* Adjust display container width */
+        margin-top: 20px; /* Add spacing between the thumbnails and large image */
+    }
+}
+
+@media (max-width: 768px) {
+    .thumbnail-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 images per line on smaller screens */
+        width: 80%; /* Increase the width of the thumbnail container */
+    }
+
+    .display-container {
+        flex-direction: column; /* Stack the image and text vertically on smaller screens */
+        text-align: center;
+        gap: 15px; /* Reduced gap */
+    }
+
+    #displayed-image {
+        width: 100%; /* Image takes full width on smaller screens */
+        max-width: 300px; /* Optional: Limit maximum size */
+    }
+
+    #explore-button {
+        width: 100%; /* Full-width button for better usability on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .thumbnail-container {
+        grid-template-columns: 1fr; /* 1 image per line on very small screens */
+    }
+
+    #displayed-image {
+        max-height: 300px; /* Adjust max height of the large image on smaller screens */
+    }
+}

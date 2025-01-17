@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,400;0,600;0,800&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Holiday</title>
+
+    <style>
+     
+      body {
+        background-color: #004138; 
+        color: #f4b776;
+        font-family: 'Montserrat Alternates', sans-serif;
+        text-align: center; 
+        padding-top: 50px; 
+        margin: 0;
+        animation: fadeInBody 1s ease-in-out;
+      }
+
+      h1 {
+        font-family: 'Permanent Marker', cursive;
+        font-size: 3rem;
+        margin-top: 95px;
+        margin-bottom: 20px;
+        color: #f4b776;
+        animation: fadeInText 1s ease-in-out;
+      }
+
+      p {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+        font-weight: 700;
+        animation: fadeInText 1s ease-in-out;
+      }
+
+      .btn-custom {
+        background-color: #f4b776;
+        color: #004138;
+        border: none;
+        font-weight: 900;
+        padding: 10px 20px;
+        font-size: 18px;
+        border-radius: 5px;
+        margin: 10px 0;
+        transition: all 0.3s ease;
+        font-weight: 600;
+        display: inline-block;
+        border: 2px solid transparent;
+        opacity: 0;
+        animation: fadeInButton 1s ease-in-out forwards;
+      }
+
+      .btn-custom:hover {
+        background-color: #004138;
+        color: #f4b776;
+        border: 2px solid #f4b776;
+      }
+
+      .btn-custom .arrow {
+        margin-left: 10px;
+        font-size: 1.2rem;
+      }
+
+      /* Box Borders and Hover Effects */
+      .container {
+  max-width: 900px;
+  /* margin: 40px; */
+  padding: 20px;
+  height: 500px;
+  border: 4px solid #004138;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  animation: slideInUp 1s ease-out forwards;
+}
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600");
+
+:root {
+  --bar-scale-y: 0;
+  --sparkle-color: rgb(253 244 215 / 40%);
+}
+
+@keyframes pop-word {
+  to {
+    transform: rotateX(0);
+  }
+}
+
+@keyframes show {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes bar-scale {
+  to {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes sparkle {
+  0% {
+    transform: scale(0);
+  }
+
+  60% {
+    transform: scale(1) translate(4px, 1px) rotate(8deg);
+  }
+
+  100% {
+    transform: scale(0) translate(4px, 1px) rotate(8deg);
+  }
+}
+
+@keyframes shimmer {
+  to {
+    text-shadow: 0 0 8px red;
+  }
+}
+
+
+
+h1 {
+  color:#e3a765;
+  font-family: "Playfair Display", Vidaloka, serif;
+  font-size: 80px;
+
+  line-height: 0.85;
+  perspective: 500px;
+}
+
+.word {
+  display: block;
+  font-weight: 700;
+  animation: show 0.01s forwards, pop-word 1.5s forwards;
+  animation-timing-function: cubic-bezier(0.14, 1.23, 0.33, 1.16);
+  opacity: 0;
+
+  transform: rotateX(120deg);
+  transform-origin: 50% 100%;
+}
+
+.word:nth-of-type(2) {
+  padding: 0 2rem;
+  font-weight: 800;
+  animation-delay: 1.5s;
+  font-size: 40px;
+  color:#036155;
+}
+
+.superscript {
+  position: relative;
+  animation-delay: 3.6s;
+
+  animation-duration: 0.25s;
+  animation-name: shimmer;
+
+  vertical-align: text-top;
+}
+
+/* bars */
+.superscript::before {
+  --bar-width: 25%;
+
+  position: absolute;
+
+  top: 37%;
+  left: 47%;
+  width: 14%;
+  height: 48%;
+
+  animation: bar-scale 0.25s linear 3s 1 forwards;
+
+  background: linear-gradient(
+    to right,
+    #004138 var(--bar-width),
+    transparent var(--bar-width) calc(100% - var(--bar-width)),
+    #004138 calc(100% - var(--bar-width))
+  );
+
+  content: "";
+
+  transform: scaleY(var(--bar-scale-y));
+}
+
+/* sparkle */
+.superscript::after {
+  --size: 10rem;
+
+  position: absolute;
+
+  top: -5%;
+  left: -85%;
+
+  width: var(--size);
+  height: var(--size);
+
+  animation: sparkle 0.4s linear 3.5s 1 forwards;
+
+  background: radial-gradient(
+      circle at center,
+      rgba(97, 79, 28, 0.94) 0% 7%,
+      transparent 7% 100%
+    ),
+    conic-gradient(
+      transparent 0deg 18deg,
+      var(--sparkle-color) 18deg,
+      transparent 20deg 40deg,
+      var(--sparkle-color) 40deg,
+      transparent 43deg 87deg,
+      var(--sparkle-color) 87deg,
+      transparent 95deg 175deg,
+      var(--sparkle-color) 175deg,
+      transparent 178deg 220deg,
+      var(--sparkle-color) 220deg,
+      transparent 222deg 270deg,
+      var(--sparkle-color) 270deg,
+      transparent 275deg 300deg,
+      var(--sparkle-color) 300deg,
+      transparent 303deg 360deg
+    );
+
+  border-radius: 50%;
+  clip-path: polygon(
+    50% 0,
+    59.13% 26.64%,
+    85.13% -2.35%,
+    100% 50%,
+    50% 100%,
+    0 50%,
+    31.39% 34.86%
+  );
+
+  content: "";
+
+  filter: blur(1px);
+
+  transform: scale(0);
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 5rem;
+  }
+
+  /* sparkle */
+  .superscript::after {
+    --size: 6rem;
+  }
+}
+
+/* Large screens (up to 1200px) */
+@media (max-width: 1200px) {
+  .container {
+    max-width: 800px;
+    padding: 18px;
+  }
+}
+
+/* Medium screens (up to 992px) */
+@media (max-width: 992px) {
+  .container {
+    max-width: 700px;
+    padding: 16px;
+  }
+}
+
+/* Small screens (up to 768px) */
+@media (max-width: 768px) {
+  .container {
+    max-width: 600px;
+    padding: 14px;
+  }
+}
+
+/* Extra small screens (up to 576px) */
+@media (max-width: 576px) {
+  .container {
+    max-width: 90%;
+    padding: 12px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  }
+}
+
+
+      .container:hover {
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        border-color: #e3a765;
+      }
+
+      /* Media Queries for Responsiveness */
+      @media (max-width: 1200px) {
+        h1 {
+          font-size: 2.5rem;
+        }
+        p {
+          font-size: 1rem;
+        }
+        .btn-custom {
+          font-size: 16px;
+        }
+      }
+
+      @media (max-width: 992px) {
+        h1 {
+          font-size: 2rem;
+        }
+        p {
+          font-size: 1rem;
+        }
+        .btn-custom {
+          font-size: 15px;
+          padding: 8px 18px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 1.8rem;
+        }
+        p {
+          font-size: 0.9rem;
+        }
+        .btn-custom {
+          font-size: 14px;
+          padding: 8px 16px;
+        }
+      }
+
+      @media (max-width: 576px) {
+        h1 {
+          font-size: 1.5rem;
+        }
+        p {
+          font-size: 0.8rem;
+        }
+        .btn-custom {
+          font-size: 13px;
+          padding: 7px 14px;
+        }
+      }
+
+      /* Animations */
+      @keyframes fadeInBody {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fadeInText {
+        from {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeInButton {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes slideInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0,9; 
+}
+
+.background-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: rgba(10, 10, 10, 0.15); Semi-transparent overlay for readability */
+  z-index: 0;
+}
+
+/* Ensure video displays on all screen sizes */
+@media (max-width: 992px) {
+  .background-video {
+    opacity: 0.6; /* Slightly adjust opacity for smaller screens */
+  }
+
+  
+}
+
+@media (max-width: 768px) {
+  .background-video {
+    object-fit: cover; /* Keep the video fully covering the screen */
+    opacity: 0.6;
+  }
+
+  
+}
+
+@media (max-width: 576px) {
+  .background-video {
+    object-fit: cover; /* Ensure the video covers the entire screen */
+    opacity: 0.5; /* Slightly reduce opacity */
+  }
+
+  
+}
+
+
+    </style>
+  </head>
+  <body>
+    <div class="background-video-wrapper">
+      <video class="background-video" autoplay muted loop>
+        <source src="./Restaurant/images/restrurent.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="background-overlay"></div>
+    </div>
+    
+    <div class="container">
+      <h1>
+        <span class="word">Wel<span class="superscript">come</span> </span>
+        <span class="word">Holiday..</span>
+      </h1>
+      
+      <p>Discover our best hotels and restaurants for your perfect holiday experience.</p>
+      <div>
+        <button class="btn btn-custom" onclick="window.location.href='hotel/hotel.html'">
+          Hotel <span class="arrow">→</span>
+        </button>
+        <br>
+        <button class="btn btn-custom" onclick="window.location.href='Restaurant/restaurant.html'">
+          Restaurant <span class="arrow">→</span>
+        </button>
+      </div>
+    </div>
+  
+  
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>

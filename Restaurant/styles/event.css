@@ -1,0 +1,176 @@
+body {
+  font-family: 'Montserrat Alternates', sans-serif;
+  background-color: #004138;
+  color: #f4b776;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.header-section {
+  text-align: center;
+  padding: 10px 0;
+  animation: slideInFromTop 1s ease;
+}
+
+.selector-container {
+  text-align: center;
+  margin: 30px 0;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.event-display {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0;
+  background-color: #033d34;
+  border: 2px solid #f4b776;
+  border-radius: 10px;
+  padding: 20px;
+  animation: fadeInUp 1s ease;
+}
+
+.event-display video {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-display video:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.event-info {
+  flex: 1 1 45%;
+  margin: 10px;
+  animation: slideInFromLeft 1s ease;
+}
+
+.event-info h2 {
+  color: #f4b776;
+  animation: slideInFromRight 1s ease;
+}
+
+.event-info p {
+  line-height: 1.8;
+  animation: fadeIn 2s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+  .event-display {
+      flex-direction: column;
+      text-align: center;
+      animation: fadeInUp 1s ease;
+  }
+
+  .event-info {
+      margin: 20px 0;
+      animation: fadeIn 1.5s ease-in-out;
+  }
+}
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+@keyframes slideInFromTop {
+  0% {
+      transform: translateY(-50px);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+      transform: translateX(-50px);
+      opacity: 0;
+  }
+  100% {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+      transform: translateX(50px);
+      opacity: 0;
+  }
+  100% {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+      opacity: 0;
+      transform: translateY(30px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+#eventSelector {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  color: #f4b776;
+  margin: 20px 0;
+  padding: 10px 15px;
+  background-color: #033d34;
+  border: 2px solid #f4b776;
+  border-radius: 10px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+#eventSelector button {
+  background-color: #f4b776;
+  color: #004138;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+#eventSelector button:hover {
+  background-color: #e69a53;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+#eventSelector button:active {
+  background-color: #d68244;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px #d68244(0, 0, 0, 0.2) inset;
+}
+
+/* Responsive Styling for Event Selector */
+@media screen and (max-width: 768px) {
+  #eventSelector {
+      flex-wrap: wrap;
+      padding: 15px;
+  }
+
+  #eventSelector button {
+      margin: 5px 0;
+      padding: 12px 25px;
+  }
+}
+

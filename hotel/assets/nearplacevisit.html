@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hotel Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet"> <!-- Add this line -->
+    <link href="../styles/hotel.css" rel="stylesheet" type="text/css">
+    <link href="../styles/placevisit.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="../hotel.html">HOLIDAY -Hotel</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../assets/roombook.html">Room Booking</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../assets/foodmenu.html">Food Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../assets/gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../assets/history.html">History</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../assets/needknow.html">Need to Know</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../assets/nearplacevisit.html">Places to Visit</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="gallery-container grid">
+        <div class="thumbnail-container">
+            <!-- 9 thumbnail images -->
+            <img src="../images/Ashtalakshmi Temple_1.webp" alt="Ashtalakshmi Temple" class="thumbnail" 
+                onclick="displayImage('../images/Ashtalakshmi Temple_1.webp', 'Ashtalakshmi Temple', 'The Ashtalakshmi Kovil is a Hindu temple, which lies on the shorelines near the Elliots beach, in Chennai, India. The temple is dedicated to the goddess Lakshmi, and her eight primary forms  the Ashtalakshmi  the giver of all eight forms of wealth, namely, offspring, success, prosperity, wealth, courage, bravery, food, and knowledge.', '1 to 2 hours', 'https://en.wikipedia.org/wiki/Ashtalakshmi_Temple,_Chennai')">
+            <img src="../images/Akkarai_Beach.webp" alt="Akkarai Beach" class="thumbnail" 
+                onclick="displayImage('../images/Akkarai_Beach.webp', 'Akkarai Beach', 'Enjoy the tranquility of this hidden gem along the East Coast Road, perfect for picnics and peaceful walks.', '2 to 3 hours', 'https://en.wikipedia.org/wiki/East_Coast_Road')">
+            <img src="../images/Breezy_Beach.avif" alt="Breezy Beach" class="thumbnail" 
+                onclick="displayImage('../images/Breezy_Beach.avif', 'Breezy Beach', 'Feel the cool breeze and enjoy the calming sound of the waves. Ideal for a quiet getaway.', '2 to 3 hours', 'https://en.wikipedia.org/wiki/Beaches_of_Chennai')">
+                <img src="../images/Valluvar_Kottam.avif" alt="Valluvar Kottam" class="thumbnail" 
+                onclick="displayImage('../images/Valluvar_Kottam.avif', 'Valluvar Kottam', 'Admire the artistic brilliance of this memorial, dedicated to Tamil poet-saint Thiruvalluvar.', '1 to 2 hours', 'https://en.wikipedia.org/wiki/Valluvar_Kottam')">
+           
+           <img src="../images/Mylapore.avif" alt="Mylapore" class="thumbnail" 
+                onclick="displayImage('../images/Mylapore.avif', 'Mylapore', 'Discover the cultural heart of Chennai, home to ancient temples and vibrant traditions.', '3 to 4 hours', 'https://en.wikipedia.org/wiki/Mylapore')">
+           
+           <img src="../images/Madras_War_Cemetery.avif" alt="Madras War Cemetery" class="thumbnail" 
+                onclick="displayImage('../images/Madras_War_Cemetery.avif', 'Madras War Cemetery', 'Pay tribute to the martyrs of war, a serene and solemn location for remembrance.', '1 to 2 hours', 'https://en.wikipedia.org/wiki/Madras_War_Cemetery')">
+           
+           <img src="../images/mahabalipuram.webp" alt="Mahabalipuram" class="thumbnail" 
+                onclick="displayImage('../images/mahabalipuram.webp', 'Mahabalipuram', 'Uncover ancient rock carvings and monuments at this UNESCO World Heritage site.', '4 to 5 hours', 'https://en.wikipedia.org/wiki/Mahabalipuram')">
+           
+           <img src="../images/marina_beach.webp" alt="Marina Beach" class="thumbnail" 
+                onclick="displayImage('../images/marina_beach.webp', 'Marina Beach', 'Marina Beach India’s longest natural urban beach, known for its beautiful sunsets, local food stalls, and a bustling atmosphere.', '2 to 3 hours', 'https://en.wikipedia.org/wiki/Marina_Beach')">
+                <img src="../images/guindy_national.avif" alt="Guindy National Park" class="thumbnail" 
+                onclick="displayImage('../images/guindy_national.avif', 'Guindy National Park', 'Explore the vibrant wildlife and lush greenery in the heart of the city.', '3 to 4 hours', 'https://en.wikipedia.org/wiki/Guindy_National_Park')">
+           
+           
+            
+        </div>
+        <div class="display-container">
+            <div>
+                <img id="displayed-image" src="../images/Ashtalakshmi Temple_1.webp" alt="Displayed Image">
+            </div>
+            <div class="display-info">
+                <p id="displayed-description">
+                    Built on the Besant Beach shore, the temple is dedicated to the eight avatars of the goddess symbolising power, wealth and health. The complex also has dedicated shrines for gods Hanuman and Ganapathi.
+                </p>
+                <span id="displayed-duration">Suggested Duration - 1 to 2 hours</span>
+                <a id="explore-link" href="https://en.wikipedia.org/wiki/Ashtalakshmi_Temple,_Chennai" rel="noopener"target="_blank" >
+                    
+
+                    <button id="explore-button" type="button">Explore</button>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // JavaScript function to update the displayed content
+        function displayImage(imageSrc, title, description, duration, wikiLink) {
+            const displayedImage = document.getElementById('displayed-image');
+            const displayedDescription = document.getElementById('displayed-description');
+            const displayedDuration = document.getElementById('displayed-duration');
+            const exploreLink = document.getElementById('explore-link');
+    
+            displayedImage.src = imageSrc;
+            displayedImage.alt = title;
+            displayedDescription.textContent = description;
+            displayedDuration.textContent = `Suggested Duration - ${duration}`;
+            exploreLink.href = wikiLink;
+        }
+    </script>
+    
+
+    
+    <footer class="footer py-5 shadow">
+        <div class="container">
+            <div class="row">
+                <!-- Logo Section -->
+                <div class="col-md-4 mb-4 footer-logo-container">
+                    <h4 class="footer-logo">HOLIDAY</h4>
+                    <a href="../hotel.html" ><p class="footer-link">Our Hotel</p></a>
+                    <a href="../../Restaurant/restaurant.html" ><p class="footer-link">Our Restaurant</p></a>
+                    <p>Experience luxury and comfort with us.</p>
+                </div>
+                
+                <!-- Learn More Section -->
+                <div class="col-md-2 mb-4">
+                    <h5>Learn More</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="../../Restaurant/assets/tablebook.html">TableBooking</a></li>
+                        <li><a href="../../Restaurant/assets/menu.html">FoodMenu</a></li>
+                        <li><a href="../../Restaurant/assets/event.html">Event</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Company Section -->
+                <div class="col-md-2 mb-4">
+                    <h5>Company</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="../../Restaurant/assets/about.html">About Us</a></li>
+                        <li><a href="../../careers.html">Careers</a></li>
+                        <li><a href="../assets/contactus.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Social Media Section -->
+                <div class="col-md-4">
+                    <h5>Follow Us</h5>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="https://www.twitter.com" target="_blank" rel="noopener" class="social-icon" aria-label="Twitter">
+                            <i class="bi bi-twitter"></i>
+                        </a>
+                        <a href="https://www.linkedin.com" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <p class="h6">&copy; 2025 Our Hotel. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    </body></html>

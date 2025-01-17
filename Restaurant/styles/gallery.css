@@ -1,0 +1,99 @@
+body {
+    background-color: #004138;
+    color: #f4b776;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+.dropdown-menu{
+    background-color: #004138;
+    color: #f4b776;
+    
+}
+
+/* Gallery Header */
+.gallery-header {
+    font-size: 24px;
+    color: #f4b776;
+    margin-top: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 2px solid #f4b776;
+    padding-bottom: 10px;
+}
+
+/* Gallery Container */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns by default */
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+/* Gallery Item */
+.gallery-item {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    opacity: 0; /* Initially hidden for animation */
+    transform: translateY(20px); /* Move down for animation effect */
+    animation: fadeInUp 0.8s ease-in-out forwards; /* Fade and move up animation */
+}
+
+.gallery-item:nth-child(odd) {
+    animation-delay: 0.2s; /* Staggered animation for odd items */
+}
+
+.gallery-item:nth-child(even) {
+    animation-delay: 0.4s; /* Staggered animation for even items */
+}
+
+.gallery-item img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease; /* Hover zoom effect */
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05); /* Zoom in on hover */
+}
+
+/* Checkbox Group */
+.checkbox-group {
+    margin: 20px 0;
+}
+
+/* Horizontal Rule */
+hr {
+    border-color: #f4b776;
+    margin: 30px 0;
+}
+
+/* Smooth Scroll Animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .gallery-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-container {
+        grid-template-columns: 1fr; /* Single column for mobile devices */
+    }
+}

@@ -1,0 +1,267 @@
+
+        body {
+            font-family: 'Montserrat Alternates', sans-serif;
+            background-color: #004138;
+            color: #f4b776;
+        }
+
+        .need-to-know {
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .need-to-know h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #f4b776;
+        }
+
+        .icon-box {
+            background-color: #ffffff1a;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            color: #f4b776;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .icon-box:hover {
+            transform: scale(1.05);
+        }
+
+        .icon-box i {
+            font-size: 36px;
+            color: #f4b776;
+        }
+
+        .info-row {
+            margin-bottom: 40px;
+        }
+
+        .info-row h4 {
+            font-size: 1.5rem;
+            margin-top: 15px;
+        }
+
+        .flower-icon {
+            color: #f4b776;
+        }
+    .icon-box {
+            background-color: #ffffff1a;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            color: #f4b776;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .icon-box:hover {
+            transform: scale(1.05);
+        }
+
+        .icon-box i {
+            font-size: 36px;
+            color: #f4b776;
+        }
+
+        .info-row {
+            margin-bottom: 40px;
+        }
+
+        .info-row h4 {
+            font-size: 1.5rem;
+            margin-top: 15px;
+        }
+
+        .flower-icon, .welcome-icon {
+            color: #f4b776;
+            font-size: 48px;
+        }
+
+        .food-timings-container{
+            display: flex;
+            width: 100%;
+        }
+        .food-timings-left {
+            text-align:center;
+            width: 80%;
+            
+        }
+
+        .food-timings-right {
+            text-align: end;
+            width: 10%;
+        }
+        body {
+            font-family: 'Montserrat Alternates', sans-serif;
+            background-color: #004138;
+            color: #f4b776;
+            animation: fadeIn 2s ease-in-out;
+        }
+        
+        /* Page Fade-In Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        .need-to-know {
+            margin: 40px auto;
+            padding: 20px;
+            animation: slideIn 1.5s ease-out;
+        }
+        
+        /* Section Slide-In Animation */
+        @keyframes slideIn {
+            from {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        .need-to-know h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #f4b776;
+            animation: textGlow 3s infinite alternate;
+        }
+        
+        /* Glowing Text Animation */
+        @keyframes textGlow {
+            from {
+                text-shadow: 0 0 5px #f4b776, 0 0 10px #f4b776, 0 0 20px #f4b776;
+            }
+            to {
+                text-shadow: 0 0 20px #ffdc9c, 0 0 30px #ffdc9c, 0 0 40px #ffdc9c;
+            }
+        }
+        
+        .icon-box {
+            background-color: #ffffff1a;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            color: #f4b776;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: popIn 1.5s ease-in-out;
+        }
+        
+        /* Icon Box Pop-In Animation */
+        @keyframes popIn {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        
+        .icon-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 10px #f4b776;
+        }
+        
+        .icon-box i {
+            font-size: 36px;
+            color: #f4b776;
+            animation: pulse 2s infinite ease-in-out;
+        }
+        
+        /* Pulse Animation for Icons */
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.2);
+                opacity: 0.8;
+            }
+        }
+        
+        .info-row {
+            margin-bottom: 40px;
+            animation: slideInFromLeft 2s ease-in-out;
+        }
+        
+        /* Row Slide-In from Left */
+        @keyframes slideInFromLeft {
+            from {
+                transform: translateX(-30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        
+        .info-row h4 {
+            font-size: 1.5rem;
+            margin-top: 15px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        
+        .flower-icon, .welcome-icon {
+            color: #f4b776;
+            font-size: 48px;
+            animation: float 3s infinite ease-in-out;
+        }
+        
+        /* Floating Animation for Icons */
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        
+        .food-timings-left {
+            
+            animation: fadeInLeft 2s ease-out;
+        }
+        
+        /* Fade-In Left Animation */
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        .food-timings-right {
+            text-align: right;
+            animation: fadeInRight 2s ease-out;
+        }
+        
+        /* Fade-In Right Animation */
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        

@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hotel Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="../styles/restaurant.css" rel="stylesheet" type="text/css">
+    <link href="../styles/tablebook.css" rel="stylesheet" type="text/css">
+    <link href="../../hotel/styles/roombook.css" rel="stylesheet" type="text/css">
+    
+</head>
+<body>
+    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="../restaurant.html">Restaurant</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./tablebook.html">Table Booking</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./menu.html">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./event.html">Event</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./species.html">Booking</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- table booking  -->
+    
+    <div class="container-tablebook">
+        <!-- Left Filters Section -->
+        <div class="left-filters">
+            <h2>Filters</h2>
+            <div class="filter-group">
+                <h3>Date</h3>
+                <select name="date" id="date" aria-label="Number of Guests">
+                    <option value="today">Today</option>
+                    <option value="tomorrow">Tomorrow</option>
+                    <option value="after">After Tomorrow</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <h3>Guests</h3>
+                <select id="guest-select" class="form-select"aria-label="Number of Guests">
+                    <option value="">Select Guests</option>
+                    <option value="3">Up to 3 Guests</option>
+                    <option value="4to5">4 to 5 Guests</option>
+                    <option value="6plus">6 or More Guests</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <h3>Meal Type</h3>
+                <select name="meal" id="meal" aria-label="Number of Guests">
+                    <option value="breakfast">Breakfast</option>
+                    <option value="brunch">Brunch</option>
+                    <option value="lunch">Lunch</option>
+                    <option value="dinner">Dinner</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <h3>Timing</h3>
+                <div class="timing-options">
+                    <button class="timing-btn" data-time="6to8">6 AM - 8 AM</button>
+                    <button class="timing-btn" data-time="8to10">8 AM - 10 AM</button>
+                    <button class="timing-btn" data-time="10to12">10 AM - 12 PM</button>
+                    <button class="timing-btn" data-time="12to2">1 PM - 3 PM</button>
+                    <button class="timing-btn" data-time="12to2">3 PM - 5 PM</button>
+                    <button class="timing-btn" data-time="12to2">5 PM - 6 PM</button>
+                </div>
+            </div>
+            <div id="selectedTimeDisplay">
+                 <span id="selectedTime"></span>
+            </div>
+        </div>
+        
+
+        <!-- Right Display Section -->
+
+        <div class="right-display">
+            <!-- Restaurant Table Booking -->
+
+    <h2>Available Restaurants</h2>
+    <div id="restaurant-cards-container" class="restaurant-cards">
+        <!-- Restaurant Card 1 -->
+        <div class="restaurant-card">
+            <img src="../images/table1.avif" alt="Restaurant 1">
+            <div class="info">
+                <h3>Cozy Dining</h3>
+                <p>⭐ 4.5 | $40 per person</p>
+                <button 
+                    class="btn btn-primary reserve-now-btn" 
+                    data-bs-toggle="modal" 
+                    data-bs-target="#reservationModal"
+                    data-restaurant="Cozy Dining">
+                    Reserve Now
+                </button>
+            </div>
+        </div>
+        <!-- Restaurant Card 2 -->
+        <div class="restaurant-card">
+            <img src="../images/table1.jpg" alt="Restaurant 2">
+            <div class="info">
+                <h3>Luxury Feast</h3>
+                <p>⭐ 4.8 | $70 per person</p>
+                <button 
+                    class="btn btn-primary reserve-now-btn" 
+                    data-bs-toggle="modal" 
+                    data-bs-target="#reservationModal"
+                    data-restaurant="Luxury Feast">
+                    Reserve Now
+                </button>
+            </div>
+        </div>
+        <!-- Restaurant Card 3 -->
+        <div class="restaurant-card">
+            <img src="../images/table2.avif" alt="Restaurant 3">
+            <div class="info">
+                <h3>Casual Eats</h3>
+                <p>⭐ 4.2 | $25 per person</p>
+                <button 
+                    class="btn btn-primary reserve-now-btn" 
+                    data-bs-toggle="modal" 
+                    data-bs-target="#reservationModal"
+                    data-restaurant="Casual Eats">
+                    Reserve Now
+                </button>
+            </div>
+        </div>
+        <!-- Restaurant Card 4 -->
+        <div class="restaurant-card">
+            <img src="../images/table7.jpg" alt="Restaurant 4">
+            <div class="info">
+                <h3>Family Eats</h3>
+                <p>⭐ 4.2 | $30 per person</p>
+                <button 
+                    class="btn btn-primary reserve-now-btn" 
+                    data-bs-toggle="modal" 
+                    data-bs-target="#reservationModal"
+                    data-restaurant="Family Eats">
+                    Reserve Now
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    
+</div></div>
+<!-- popcard -->
+
+<div class="modal fade" id="reservationModal" tabindex="-1" aria-labelledby="reservationModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="reservationModalLabel">Table Reservation</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="reservationForm"  >
+                    <div class="mb-3">
+                        <label for="restaurantName" class="form-label">Restaurant Name</label>
+                        <input type="text" class="form-control" id="restaurantName" name="restaurantName" readonly required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="diningDate" class="form-label">Dining Date</label>
+                        <input type="date" class="form-control" id="diningDate" name="diningDate" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="timeSlot" class="form-label">Time Slot</label>
+                        <select class="form-control" id="timeSlot" name="timeSlot" required>
+                            <option value="Lunch">Lunch (12:00 PM - 3:00 PM)</option>
+                            <option value="Dinner">Dinner (7:00 PM - 10:00 PM)</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="guestCount" class="form-label">Number of Guests</label>
+                        <input type="number" class="form-control" id="guestCount" name="guestCount" min="1" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="contactInfo" class="form-label">Contact Information</label>
+                        <input type="text" class="form-control" id="contactInfo" name="contactInfo" placeholder="Enter your phone or email" required>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="submit" class="btn btn-primary" id="confirmBtn">Confirm Reservation</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+  <!-- Confirmation Card -->
+<div id="confirmationCard" class="card" >
+    <div class="card-body">
+        <h5 class="card-title">Thank You!</h5>
+        <p class="card-text" id="reservationDetails">
+            Your reservation has been confirmed for:
+            <br> Time: <span id="reservationTime"></span>
+            <br> Table Number: <span id="tableNumber"></span>
+        </p>
+        <button class="btn btn-primary" id="okBtn">OK</button>
+    </div>
+</div>
+
+
+    <!-- Footer -->
+    <footer class="footer py-5 shadow">
+        <div class="container">
+            <div class="row">
+                <!-- Logo Section -->
+                <div class="col-md-4 mb-4 footer-logo-container">
+                    <h4 class="footer-logo">HOLIDAY</h4>
+                    <a href="../../hotel/hotel.html" ><p class="footer-link">Our Hotel</p></a>
+                    <a href="../../Restaurant/restaurant.html" ><p class="footer-link">Our Restaurant</p></a>
+                    <p>Experience luxury and comfort with us.</p>
+                </div>
+                
+                <!-- Learn More Section -->
+                <div class="col-md-2 mb-4">
+                    <h5>Learn More</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="../hotel/assets/roombook.html">Room Booking</a></li>
+                        <li><a href="../hotel/assets/foodmenu.html">Food Menu</a></li>
+                        <li><a href="../hotel/assets/gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Company Section -->
+                <div class="col-md-2 mb-4">
+                    <h5>Company</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="../hotel/assets/history.html">About Us</a></li>
+                        <li><a href="../careers.html">Careers</a></li>
+                        <li><a href="../hotel/assets/contactus.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Social Media Section -->
+                <div class="col-md-4">
+                    <h5>Follow Us</h5>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="https://www.twitter.com" target="_blank" rel="noopener" class="social-icon" aria-label="Twitter">
+                            <i class="bi bi-twitter"></i>
+                        </a>
+                        <a href="https://www.linkedin.com" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <p class="h6">&copy; 2025 Our Hotel. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="../script/tablebook.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

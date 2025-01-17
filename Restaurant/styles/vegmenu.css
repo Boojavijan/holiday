@@ -1,0 +1,254 @@
+/* Custom styles with updated theme */
+body {
+    font-family: 'Montserrat Alternates', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #004138; /* Updated background color */
+    color: #f4b776; /* Updated text color */
+}
+header {
+    background-color: #002a24; /* Darker shade for header */
+    color: #f4b776;
+    text-align: center;
+    padding: 20px;
+}
+.cuisine-filter {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.cuisine-filter button:hover {
+    background-color: #e2a664; /* Slightly darker for hover effect */
+}
+.menu-panel {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 70%;
+}
+.menu-item {
+    background-color: #004138; /* Match body background */
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #f4b776;
+}
+.menu-item img {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+}
+.menu-details {
+    padding: 10px;
+}
+.menu-details h3 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+.menu-details p {
+    font-size: 14px;
+}
+.price-rating {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.price {
+    font-weight: bold;
+}
+.rating {
+    color: #ff9900;
+}
+.right-panel {
+    width: 25%;
+    padding: 10px;
+}
+.menu-name p {
+    font-size: 16px;
+    margin: 5px 0;
+    text-align: center;
+}
+.menu-name h5{
+    text-align: center;
+    color: #fff;
+    padding: 5px;
+}
+.download-btn {
+    background-color: #f4b776;
+    color: #004138;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    margin-left: 55px;
+}
+.download-btn:hover {
+    background-color: #e2a664;
+}
+
+/* Popup styles */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+.popup-card {
+    background-color: #002a24; /* Match header color */
+    padding: 20px;
+    border-radius: 8px;
+    
+    text-align: center;
+    color: #f4b776;
+}
+.quantity-control button {
+    padding: 5px 15px;
+    background-color: #f4b776;
+    color: #004138;
+    border: none;
+    cursor: pointer;
+    margin: 15px;
+}
+.quantity-control button:hover {
+    background-color: #e2a664;
+}
+.price-details {
+    margin-top: 15px;
+}
+.price-details p {
+    font-size: 16px;
+}
+.btn-theme {
+    background-color: #f4b776;
+    color: #004138;
+    border: none;
+    border-radius: 3px;
+    font-weight: bold;
+    margin-left: 50px;
+    height: 40px;
+    width: 150px;
+    margin-top: 15px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-theme:hover {
+    background-color: #e69a53;
+    color: #fff;
+}
+.cuisine-item {
+    background-color: #f4b776;
+    color: #004138;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+/* Base styles remain as provided */
+
+/* Responsive styles */
+@media screen and (max-width: 1200px) {
+    .menu-container {
+        grid-template-columns: repeat(2, 1fr); /* Reduce columns for medium screens */
+    }
+    .menu-item img {
+        height: 180px; /* Adjust image height */
+    }
+    .menu-details h3 {
+        font-size: 16px;
+    }
+    .price-rating {
+        flex-direction: column; /* Stack price and rating vertically */
+        align-items: flex-start;
+    }
+    .download-btn, .btn-theme {
+        width: 130px; /* Reduce button width */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .menu-panel {
+        flex-direction: column; /* Stack menu and right panel vertically */
+        align-items: center;
+    }
+    .menu-container {
+        width: 90%; /* Reduce container width */
+        grid-template-columns: 1fr; /* Single column for small screens */
+    }
+    .menu-item img {
+        height: 150px; /* Further reduce image height */
+    }
+    .right-panel {
+        width: 100%; /* Full width for right panel */
+        padding: 10px 0;
+    }
+    .download-btn {
+        margin-left: 0;
+        text-align: center;
+    }
+    .btn-theme {
+        width: 100%; /* Full width for buttons */
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 14px; /* Smaller base font size for mobile */
+    }
+    .header {
+        padding: 15px; /* Adjust padding for header */
+    }
+    .menu-item {
+        padding: 8px; /* Reduce padding */
+    }
+    .menu-details h3 {
+        font-size: 14px; /* Smaller text size */
+    }
+    .price-rating {
+        font-size: 14px; /* Adjust price and rating size */
+    }
+    .cuisine-filter button {
+        padding: 8px 15px; /* Adjust button padding */
+    }
+    .cuisine-item {
+        font-size: 14px; /* Adjust cuisine item font size */
+        padding: 8px 15px;
+    }
+    .quantity-control button {
+        padding: 5px 10px; /* Smaller buttons for quantity control */
+    }
+    .popup-card {
+        padding: 15px; /* Reduce popup padding */
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .menu-details h3 {
+        font-size: 12px; /* Further adjust text size for very small screens */
+    }
+    .menu-item img {
+        height: 120px; /* Smaller image height */
+    }
+    .cuisine-item {
+        font-size: 12px; /* Smaller text for cuisine items */
+        padding: 5px 10px;
+    }
+    .download-btn {
+        padding: 8px 10px;
+        font-size: 12px; 
+        text-align: center;
+        
+    }
+}

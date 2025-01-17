@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hotel Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet"> <!-- Add this line -->
+    <link href="./styles/hotel.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    
+    <!-- Scrolling Text -->
+    <div class="marquee-text">
+        <span class="welcome-info">Welcome to Our Hotel - Experience Comfort, Luxury, and Relaxation</span>
+        <button class="btn-custom contact-btn" onclick="window.location.href='../hotel/assets/contactus.html'" type="button">Contact Us</button>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">Holiday</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./assets/roombook.html">Room Booking</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./assets/foodmenu.html">Food Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../hotel/assets/gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../hotel/assets/history.html">History</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../hotel/assets/needknow.html">Need to Know</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../hotel/assets/nearplacevisit.html">Places to Visit</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container text-center my-5">
+        <h1>Welcome to Our Hotel</h1>
+        <p>Experience comfort, luxury, and relaxation at our hotel.</p>
+        <div class="main-image-container">
+            <img src="./images/banner.jpg" alt="Hotel Luxury" class="main-image">
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer py-5 shadow">
+        <div class="container">
+            <div class="row">
+                <!-- Logo Section -->
+                <div class="col-md-4 mb-4 footer-logo-container">
+                    <a href="../Restaurant/restaurant.html" ><h4 class="footer-logo">Our Restaurant</h4></a>
+                    <p>Experience luxury and comfort with us.</p>
+                </div>
+                
+                <!-- Learn More Section -->
+                <div class="col-md-2 mb-4">
+                    <h5>Learn More</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="../Restaurant/assets/tablebook.html">TableBooking</a></li>
+                        <li><a href="../Restaurant/assets/menu.html">FoodMenu</a></li>
+                        <li><a href="../Restaurant/assets/event.html">Event</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Company Section -->
+                <div class="col-md-2 mb-4">
+                    <h5>Company</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="../Restaurant/assets/about.html">About Us</a></li>
+                        <li><a href="../careers.html">Careers</a></li>
+                        <li><a href="../hotel/assets/contactus.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Social Media Section -->
+                <div class="col-md-4">
+                    <h5>Follow Us</h5>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="https://www.twitter.com" target="_blank" rel="noopener" class="social-icon" aria-label="Twitter">
+                            <i class="bi bi-twitter"></i>
+                        </a>
+                        <a href="https://www.linkedin.com" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <p class="h6">&copy; 2025 Our Hotel. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function toggleNavbar() {
+    const toggler = document.querySelector('.custom-toggler');
+    const navbarMenu = document.getElementById('navbarMenu');
+    
+    toggler.classList.toggle('active');
+    navbarMenu.classList.toggle('show');
+}
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

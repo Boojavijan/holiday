@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hotel Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet"> <!-- Add this line -->
+    <link href="../styles/restaurant.css" rel="stylesheet" type="text/css">
+    <link href="../styles/aboutus.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+      <div class="container">
+          <a class="navbar-brand" href="../restaurant.html">HOLIDAY-Restaurant</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto">
+                  <li class="nav-item">
+                      <a class="nav-link" href="./tablebook.html">Table Booking</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="./menu.html" id="menuDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Menu
+                      </a>
+                      <ul class="dropdown-menu" aria-labelledby="menuDropdown">
+                          <li><a class="dropdown-item" href="./menu.html">Veg and Non-Veg</a></li>
+                          <li><a class="dropdown-item" href="./vegmenu.html">Veg Menu</a></li>
+                          <li><a class="dropdown-item" href="./nonvegmenu.html">Non-Veg Menu</a></li>
+                      </ul>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="./gallery.html">Gallery</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="./event.html">Event</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="./about.html">AboutUs</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+
+    
+</head>
+<body>
+    <!-- About Section -->
+<div class="container-about mt-5">
+  <div class="row">
+    <!-- Left Column -->
+    <div class="col-md-7 left-content">
+      <h2 class="section-heading text-center">About Holiday</h2>
+      <p class="about-text">
+        <strong>Holiday</strong> is a luxurious hotel and restaurant, a perfect retreat for relaxation and indulgence. 
+        Nestled amidst serene landscapes, we offer guests a blend of comfort, elegance, and unparalleled hospitality. 
+        Whether you're staying in one of our opulent rooms or dining at our gourmet restaurant, every detail is designed to 
+        make your experience truly exceptional. Our commitment to quality and service has made us a preferred choice for 
+        travelers seeking the best in accommodation and dining.
+      </p>
+    </div>
+
+    <!-- Right Column -->
+    <div class="col-md-5 border-start ps-4">
+      <h2 class="section-heading">What We Are</h2>
+      <p>
+        At <strong>Holiday</strong>, we redefine luxury with our state-of-the-art facilities, exquisite culinary offerings, 
+        and personalized services that cater to your every need.
+      </p>
+
+      <h2 class="section-heading mt-4">Why Choose Us?</h2>
+      <ul>
+        <li>Elegant rooms with breathtaking views</li>
+        <li>Delectable cuisines crafted by world-class chefs</li>
+        <li>Convenient location and peaceful ambiance</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+  <div class="container-review mt-5">
+    <!-- Review Section -->
+    <div class="row mt-5 g-0">
+      
+      <div class="review-section mt-4" >
+        <!-- Dynamic Counter -->
+        <div class="dynamic-counter"><h2 class="text-center">Customer Reviews</h2>
+          <div>
+            <h5>Daily Customers</h5>
+            <span id="dailyCustomerCount" class="text-center">0</span>+
+          </div>
+          <div>
+            <h5>Regular Customers</h5>
+            <span id="regularCustomerCount">0</span>+
+          </div>
+        </div>
+        <!-- Reviews Carousel -->
+        <div class="reviews me-4" >
+          <div id="reviewCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <!-- Review Card 1 -->
+              <div class="carousel-item active">
+                <div class="review-card">
+                  <div class="review-profile">J</div>
+                  <div class="review-content">
+                    <h5>Jai</h5><strong>4.8/5&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; ★★★★★</strong><br><br>
+                    <span>"Stay in Style at Holiday Hotel"</span>
+                    <p>Experience the ultimate in comfort and luxury at Holiday Hotel! 🌟 From spacious, beautifully designed rooms to top-notch amenities, every detail is crafted to perfection. Our friendly staff is always ready to go the extra mile to make your stay unforgettable. Book your getaway today and relax in style! 🏨✨</p>
+                    
+                  </div>
+                </div>
+              </div>
+              <!-- Review Card 2 -->
+              <div class="carousel-item">
+                <div class="review-card">
+                  <div class="review-profile">P</div>
+                  <div class="review-content">
+                    <h5>Pooja Sharma</h5><strong>4.8/5&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; ★★★★★</strong><br><br>
+                    <span>"Dine with Delight at Holiday Restaurant"</span>
+                    <p>Craving an extraordinary dining experience? 🍴 Holiday Restaurant offers a delightful menu filled with flavors from around the world. Whether it’s a romantic dinner or a family gathering, our attentive staff ensures every moment is special. Come, indulge in delicious meals, and let us take care of the rest! 🥂🍝</p>
+                    
+                  </div>
+                </div>
+              </div>
+              <!-- Review Card 3 -->
+              <div class="carousel-item">
+                <div class="review-card">
+                  <div class="review-profile">A</div>
+                  <div class="review-content">
+                    <h5>Alex Johnson</h5><strong>4.8/5&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; ★★★★★</strong><br><br>
+                    <span>"Holiday – Where Hospitality Meets Excellence"</span>
+                    <p>At Holiday, it’s more than just a stay—it’s an experience! 🌟 Our dedicated team is here to provide you with exceptional service, ensuring you feel at home from the moment you arrive. Whether you're here for business or leisure, expect nothing but the best. 🛎️🌟</p>
+                    
+                    
+                  </div>
+                </div>
+              </div>
+              <!-- card4 -->
+              <div class="carousel-item">
+                <div class="review-card">
+                  <div class="review-profile">A</div>
+                  <div class="review-content">
+                    <h5>Alex Johnson</h5><strong>4.8/5&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; ★★★★★</strong><br><br>
+                    <span>"Unwind and Indulge at Holiday"</span>
+                    <p>Looking for a serene escape? 🌿 Holiday Hotel welcomes you with cozy rooms, modern amenities, and a team that treats you like family. Pair your stay with a visit to the Holiday Restaurant for a culinary journey you won’t forget. Your perfect retreat awaits! 🍷🌅</p>
+                    
+                    
+                  </div>
+                </div>
+              </div>
+              <!-- card4 -->
+              <div class="carousel-item">
+                <div class="review-card">
+                  <div class="review-profile">A</div>
+                  <div class="review-content">
+                    <h5>Alex Johnson</h5><strong>4.8/5&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; ★★★★★</strong><br><br>
+                    <span>"Experience Holiday Magic"</span>
+                    <p>Relax, dine, and create memories at Holiday! 🏨🍽️ Our hotel offers more than just a place to stay—it’s a sanctuary of comfort and care. Enjoy our delectable cuisine, warm hospitality, and exceptional services. Holiday is where unforgettable experiences come to life. See you soon! 🌟💫</p>
+                    
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Carousel Indicators -->
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+              <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+ 
+    <!-- Footer -->
+    <footer class="footer py-5 shadow">
+        <div class="container">
+            <div class="row">
+                <!-- Logo Section -->
+                <div class="col-md-4 mb-4 footer-logo-container">
+                    <h4 class="footer-logo">HOLIDAY</h4>
+                    <a href="../../hotel/hotel.html" ><p class="footer-link">Our Hotel</p></a>
+                    <a href="../../Restaurant/restaurant.html" ><p class="footer-link">Our Restaurant</p></a>
+                    <p>Experience luxury and comfort with us.</p>
+                </div>
+                
+                <!-- Learn More Section -->
+                <div class="col-md-2 mb-4">
+                    <h5>Learn More</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="../hotel/assets/roombook.html">Room Booking</a></li>
+                        <li><a href="../hotel/assets/foodmenu.html">Food Menu</a></li>
+                        <li><a href="../hotel/assets/gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Company Section -->
+                <div class="col-md-2 mb-4">
+                    <h5>Company</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="../assets/about.html">About Us</a></li>
+                        <li><a href="../careers.html">Careers</a></li>
+                        <li><a href="../../hotel/assets/contactus.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Social Media Section -->
+                <div class="col-md-4">
+                    <h5>Follow Us</h5>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="https://www.twitter.com" target="_blank" rel="noopener" class="social-icon" aria-label="Twitter">
+                            <i class="bi bi-twitter"></i>
+                        </a>
+                        <a href="https://www.linkedin.com" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <p class="h6">&copy; 2025 Our Hotel. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script >
+      document.addEventListener('DOMContentLoaded', () => {
+          const dailyCustomerCount = document.getElementById('dailyCustomerCount');
+          const regularCustomerCount = document.getElementById('regularCustomerCount');
+
+          let dailyCount = 0;
+          let regularCount = 0;
+
+          const incrementCounts = () => {
+              if (dailyCount < 500) {
+                  dailyCount += Math.floor(Math.random() * 5 + 1);
+                  dailyCustomerCount.textContent = dailyCount;
+              }
+
+              if (regularCount < 300) {
+                  regularCount += Math.floor(Math.random() * 3 + 1);
+                  regularCustomerCount.textContent = regularCount;
+              }
+          };
+
+          setInterval(incrementCounts, 100);
+      });
+      const counterElement = document.getElementById('counter');
+    let count = 0;
+    const duration = 10; // 10 seconds
+
+    function startCounting() {
+      let interval = setInterval(() => {
+        counterElement.textContent = count++;
+        if (count > duration) {
+          clearInterval(interval);
+          setTimeout(() => {
+            count = 0; // Reset the count
+            startCounting(); // Start the process again
+          }, duration * 1000); // Pause for 10 seconds
+        }
+      }, 1000); // Update every second
+    }
+
+    // Start the first loop
+    startCounting();
+  </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+  

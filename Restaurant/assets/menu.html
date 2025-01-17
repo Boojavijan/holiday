@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hotel Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet"> <!-- Add this line -->
+    <link href="../styles/restaurant.css" rel="stylesheet" type="text/css">
+    <link href="../styles/menu.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="../restaurant.html">HOLIDAY-Restaurant</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./tablebook.html">Table Booking</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="./menu.html" id="menuDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Menu
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="menuDropdown">
+                            <li><a class="dropdown-item" href="./menu.html">Veg and Non-Veg</a></li>
+                            <li><a class="dropdown-item" href="./vegmenu.html">Veg Menu</a></li>
+                            <li><a class="dropdown-item" href="./nonvegmenu.html">Non-Veg Menu</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./event.html">Event</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./about.html">AboutUs</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+  
+
+
+ <!-- menu -->
+   <div class="container menu-container">
+     <h1 class="text-center">Food Menu</h1>
+     <div class="row justify-content-center">
+       <div class="col-md-3">
+         <label for="cuisines">Cuisines</label>
+         <select class="form-select" id="cuisines">
+           <option value="all">All</option>
+           <option value="south-indian">South Indian</option>
+           <option value="north-indian">North Indian</option>
+           <option value="chinese">Chinese</option>
+           <option value="japanese">Japanese</option>
+         </select>
+       </div>
+       <div class="col-md-3">
+         <label for="menu">Menu</label>
+         <select class="form-select" id="menu">
+           <option value="all">All</option>
+           <option value="lunch">Lunch</option>
+           <option value="dinner">Dinner</option>
+           <option value="snack">Snack</option>
+           <option value="breakfast">Breakfast</option>
+           <option value="fast-food-branch">Fast Food Branch</option>
+         </select>
+       </div>
+       <div class="col-md-3">
+         <label for="food-type">Food Type</label>
+         <select class="form-select" id="food-type">
+           <option value="all">All</option>
+           <option value="veg">Veg</option>
+           <option value="non-veg">Non-Veg</option>
+         </select>
+       </div>
+       <div class="col-md-2 d-flex align-items-end">
+         <button class="btn btn-theme w-100" onclick="filterMenu()">Search</button>
+       </div>
+     </div>
+ 
+     <hr>
+ 
+     <!-- Display Cuisines -->
+     <div class="cuisine-list" id="cuisineList">
+       <!-- Cuisine buttons will be dynamically inserted here -->
+     </div>
+     
+
+  
+     <div class="row menu-grid" id="menuGrid">
+       <!-- Menu items will be dynamically inserted here -->
+     </div>
+ 
+     <hr>
+ 
+     <div class="menu-header">Online Order</div>
+     <div class="row menu-grid" id="orderMenuGrid">
+       <!-- Online order menu items will be dynamically inserted here -->
+     </div>
+   </div>
+ 
+
+    
+    <!-- Footer -->
+    <footer class="footer py-5 shadow">
+        <div class="container">
+            <div class="row">
+                <!-- Logo Section -->
+                <div class="col-md-4 mb-4 footer-logo-container">
+                    <h4 class="footer-logo">HOLIDAY</h4>
+                    <a href="../../hotel/hotel.html" ><p class="footer-link">Our Hotel</p></a>
+                    <a href="../../Restaurant/restaurant.html" ><p class="footer-link">Our Restaurant</p></a>
+                    <p>Experience luxury and comfort with us.</p>
+                </div>
+                
+                <!-- Learn More Section -->
+                <div class="col-md-2 mb-4">
+                    <h5>Learn More</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="../hotel/assets/roombook.html">Room Booking</a></li>
+                        <li><a href="../hotel/assets/foodmenu.html">Food Menu</a></li>
+                        <li><a href="../hotel/assets/gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Company Section -->
+                <div class="col-md-2 mb-4">
+                    <h5>Company</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="../assets/about.html">About Us</a></li>
+                        <li><a href="../careers.html">Careers</a></li>
+                        <li><a href="../../hotel/assets/contactus.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Social Media Section -->
+                <div class="col-md-4">
+                    <h5>Follow Us</h5>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="https://www.twitter.com" target="_blank" rel="noopener" class="social-icon" aria-label="Twitter">
+                            <i class="bi bi-twitter"></i>
+                        </a>
+                        <a href="https://www.linkedin.com" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <p class="h6">&copy; 2025 Our Hotel. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+     
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../script/menu.js"></script>
+</body>
+</html>

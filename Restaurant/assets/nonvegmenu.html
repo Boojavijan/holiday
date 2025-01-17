@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hotel Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet"> <!-- Add this line -->
+    <link href="../styles/restaurant.css" rel="stylesheet" type="text/css">
+    <link href="../styles/vegmenu.css" rel="stylesheet" type="text/css">
+    <!-- <link href="../styles/menu.css" rel="stylesheet" type="text/css"> -->
+</head>
+<body>
+    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="../restaurant.html">HOLIDAY-Restaurant</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./tablebook.html">Table Booking</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="./menu.html" id="menuDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Menu
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="menuDropdown">
+                            <li><a class="dropdown-item" href="./menu.html">Veg and Non-Veg</a></li>
+                            <li><a class="dropdown-item" href="./vegmenu.html">Veg Menu</a></li>
+                            <li><a class="dropdown-item" href="./nonvegmenu.html">Non-Veg Menu</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./event.html">Event</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./about.html">AboutUs</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+  
+<!-- vegmenu -->
+<h1 class="text-center">Non-Vegetarian Menu</h1>
+
+<div class="cuisine-filter " >
+    <button onclick="filterCuisine('south-indian')" class="cuisine-item">South Indian</button>
+    <button onclick="filterCuisine('north-indian')"class="cuisine-item">North Indian</button>
+    <button onclick="filterCuisine('chinese')"class="cuisine-item">Chinese</button>
+    <button onclick="filterCuisine('italian')"class="cuisine-item">Italian</button>
+    <button onclick="showAll()" class="cuisine-item">Show All</button>
+</div>
+
+<div class="menu-panel">
+    
+    <div id="menu" class="menu-container"></div>
+    <div class="right-panel">
+        <div class="menu-name"><span>Today </span>
+            <h2>Non-Veg Menu</h2>
+        <h5>Lunch</h5>
+<p>Butter Chicken  - ₹300</p>
+<p>Chicken Biryani  - ₹250</p>
+<p>Sweet and Sour Chicken  - ₹240</p>
+<p>Fish Curry - ₹320</p>
+
+<h5>Dinner</h5>
+<p>Ramen  - ₹400</p>
+
+<!-- Snack Items --><h5>Snack</h5>
+<p>Chicken Wings  - ₹250</p>
+
+<h5>Fast Food Items</h5>
+<p>Chicken Nuggets  - ₹200</p>
+
+<!--  -->
+<h5>Italian Item</h5>
+<p>Margherita Pizza  - ₹280</p>
+
+            
+        </div>
+        <button class="download-btn" onclick="downloadPDF()"class="cuisine-item">Download Menu </button>
+    </div>
+</div>
+
+<!-- Order Now Popup -->
+<div class="popup-overlay" id="popupOverlay">
+    <div class="popup-card">
+        <h3 id="foodName">Food Name</h3>
+        <div class="quantity-control">
+            <button onclick="decreaseQuantity()">-</button>
+            <span id="quantity">1</span>
+            <button onclick="increaseQuantity()">+</button>
+        </div>
+        <div class="price-details">
+            <p id="price">Price: ₹0</p>
+            <p id="totalPrice">Total Price: ₹0</p>
+        </div>
+        <button onclick="closePopup()"class="btn-theme">Close</button>
+        <button onclick="addToCart()"class="btn-theme">Add to Cart</button>
+    </div>
+</div>
+ 
+    <!-- Footer -->
+    <footer class="footer py-5 shadow">
+        <div class="container">
+            <div class="row">
+                <!-- Logo Section -->
+                <div class="col-md-4 mb-4 footer-logo-container">
+                    <h4 class="footer-logo">HOLIDAY</h4>
+                    <a href="../../hotel/hotel.html" ><p class="footer-link">Our Hotel</p></a>
+                    <a href="../../Restaurant/restaurant.html" ><p class="footer-link">Our Restaurant</p></a>
+                    <p>Experience luxury and comfort with us.</p>
+                </div>
+                
+                <!-- Learn More Section -->
+                <div class="col-md-2 mb-4">
+                    <h5>Learn More</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="../hotel/assets/roombook.html">Room Booking</a></li>
+                        <li><a href="../hotel/assets/foodmenu.html">Food Menu</a></li>
+                        <li><a href="../hotel/assets/gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Company Section -->
+                <div class="col-md-2 mb-4">
+                    <h5>Company</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="../assets/about.html">About Us</a></li>
+                        <li><a href="../careers.html">Careers</a></li>
+                        <li><a href="../../hotel/assets/contactus.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Social Media Section -->
+                <div class="col-md-4">
+                    <h5>Follow Us</h5>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="https://www.twitter.com" target="_blank" rel="noopener" class="social-icon" aria-label="Twitter">
+                            <i class="bi bi-twitter"></i>
+                        </a>
+                        <a href="https://www.linkedin.com" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <p class="h6">&copy; 2025 Our Hotel. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../script/nonveg.js"></script>
+</body>
+</html>
+
+    
