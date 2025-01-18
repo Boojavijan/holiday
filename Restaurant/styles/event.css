@@ -57,19 +57,6 @@ body {
   animation: fadeIn 2s ease-in-out;
 }
 
-@media screen and (max-width: 768px) {
-  .event-display {
-      flex-direction: column;
-      text-align: center;
-      animation: fadeInUp 1s ease;
-  }
-
-  .event-info {
-      margin: 20px 0;
-      animation: fadeIn 1.5s ease-in-out;
-  }
-}
-
 /* Keyframes for Animations */
 @keyframes fadeIn {
   0% {
@@ -161,16 +148,93 @@ body {
   box-shadow: 0 4px 8px #d68244(0, 0, 0, 0.2) inset;
 }
 
-/* Responsive Styling for Event Selector */
+/* Media Queries */
 @media screen and (max-width: 768px) {
+  .event-display {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+  }
+
+  .event-info {
+    flex: 1 1 100%;
+    text-align: center; /* Center-align text for better readability */
+    margin: 10px 0;
+  }
+
   #eventSelector {
-      flex-wrap: wrap;
-      padding: 15px;
+    flex-direction: column;
+    gap: 10px; /* Reduce gap between buttons */
+    padding: 10px;
   }
 
   #eventSelector button {
-      margin: 5px 0;
-      padding: 12px 25px;
+    width: 100%; /* Make buttons full-width */
   }
 }
+
+@media screen and (max-width: 576px) {
+  body {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+
+  .header-section {
+    padding: 5px 0;
+  }
+
+  .event-display {
+    padding: 15px; /* Reduce padding */
+  }
+
+  #eventSelector button {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+}
+.event-video {
+  width: 100%; /* Make it responsive */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Optional: round corners */
+  display: block; /* Ensure it displays correctly */
+  max-width: 100%; /* Ensure no overflow */
+}
+
+@media screen and (max-width: 768px) {
+  .event-video {
+    max-width: 90%; /* Adjust for smaller screens */
+    margin: 0 auto; /* Center it */
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .event-video {
+    max-width: 100%; /* Full width for very small screens */
+    margin: 0 auto;
+  }
+}
+
+.event-display video, 
+.event-display img {
+  width: 100%; /* Default full width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .event-display video, 
+  .event-display img {
+    max-width: 90%; /* Slightly reduce width for better fit */
+    margin: 0 auto; /* Center video or image */
+    display: block; /* Ensure it's properly displayed */
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .event-display video, 
+  .event-display img {
+    max-width: 100%; /* Full width for small screens */
+    margin: 0 auto;
+    display: block;
+  }
+}
+
 
